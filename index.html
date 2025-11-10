@@ -1,49 +1,157 @@
+<!-- We'll now build the improved HTML structure. User will customize images later. -->
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
-    <title>Ashfaq's Link-Bio</title>
-  </head>
-  <body>
-    <div class="links-card">
-      <img src="IMG_20220129_114328.jpg" alt="portrait" class="avatar" />
-      <h2>Mohammad Ashfaq Mansuri</h2>
-      <p class="bio">Web Developer</p>
-      <!-- <p class="tagline">""</p> -->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mohammad Ashfaq Mansuri | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+<style>
+body { background:#ffffff; color:#222; font-family:Arial, sans-serif; }
+.hero { background:#355C9C; color:white; padding:60px 20px; text-align:center; }
+button, .btn { background:white; color:#355C9C; border:none; padding:10px 20px; border-radius:4px; cursor:pointer; }
+.gallery img { border:2px solid #355C9C; border-radius:6px; }
+.skills-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(120px, 1fr)); gap:12px; padding-top:10px; }
+.skill { background:#f4f6fa; border:1px solid #d5ddeb; padding:12px; text-align:center; border-radius:6px; font-weight:600; color:#355C9C; }
 
-      <div class="links">
-        <a id="yt" href="https://www.youtube.com/@iamashfaq619"
-          ><i class="fa-brands fa-youtube"></i> Youtube</a
-        >
-        <a id="git" href="#"><i class="fab fa-github"></i> GitHub</a>
-        <a id="iq" href="https://www.instagram.com/ashfaqqmansuri/"
-          ><i class="fab fa-instagram"></i> Instagram</a
-        >
-        <a
-          id="linkedin"
-          href="https://www.linkedin.com/in/ashfaq-mansuri-b80662297/"
-          ><i class="fab fa-linkedin"></i> LinkedIn</a
-        >
-        <!-- <a id="mail" href="mailto:ashfaqmn37@gmail.com"
-          ><i class="fa-solid fa-envelope"></i> Email Me</a
-        > -->
-        <a
-          id="mail"
-          href="mailto:ashfaqmn37@gmail.com?subject=Hello&body=I%20want%20to%20contact%20you"
-        >
-          <i class="fa-solid fa-envelope"></i> Email Me
-        </a>
+.work-grid { display:flex; flex-wrap:wrap; gap:16px; justify-content:center; }
+.work-item { width:200px; height:200px; overflow:hidden; border-radius:8px; border:2px solid #355C9C; }
+.work-item img { width:100%; height:100%; object-fit:cover; transition:0.3s; cursor:pointer; }
+.work-item img:hover { transform:scale(1.05); }
+
+.fade-up {opacity:0; transform:translateY(30px); transition:0.6s ease;} 
+.fade-up.show {opacity:1; transform:translateY(0);} 
+
+.contact-buttons{display:flex;gap:12px;justify-content:center;margin-top:12px;}
+.contact-icons{margin-top:10px;display:flex;gap:18px;justify-content:center;font-size:24px;}
+.contact-icons a{text-decoration:none;color:#355C9C;transition:0.3s;}
+.contact-icons a:hover{transform:scale(1.2);} 
+
+.section, section { padding: 80px 20px; }
+header.hero { padding: 100px 20px; }
+footer { padding: 40px 20px; margin-top:60px; }
+
+</style>
+<style>
+body { background:#ffffff; color:#222; font-family:Arial, sans-serif; }
+.hero { background:#355C9C; color:white; padding:60px 20px; text-align:center; }
+button, .btn { background:white; color:#355C9C; border:none; padding:10px 20px; border-radius:4px; cursor:pointer; transition:0.3s; }
+button:hover, .btn:hover { background:#e8eef8; }
+.gallery img { border:2px solid #355C9C; border-radius:6px; transition:transform 0.3s, box-shadow 0.3s; cursor:pointer; }
+.gallery img:hover { transform:scale(1.05); box-shadow:0 6px 20px rgba(0,0,0,0.2); }
+
+/* Lightbox */
+#lightbox {
+  position:fixed;
+  top:0; left:0;
+  width:100%; height:100%;
+  background:rgba(0,0,0,0.8);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  visibility:hidden;
+  opacity:0;
+  transition:0.3s;
+}
+#lightbox img {
+  max-width:90%; max-height:90%; border-radius:8px;
+}
+#lightbox.show { visibility:visible; opacity:1; }
+
+/* Contact Button Outline Style */
+.hero-btns { display:flex; gap:12px; justify-content:center; margin-top:20px; }
+.btn-outline { background:transparent; color:white; border:2px solid white; padding:10px 20px; border-radius:4px; transition:0.3s; cursor:pointer; text-decoration:none; }
+.btn-outline:hover { background:white; color:#355C9C; }
+</style>
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-content">
+      <h1>Mohammad Ashfaq Mansuri</h1>
+      <p class="tagline">Designing &amp; Building Web Interfaces with Clarity.</p>
+      <div class="hero-btns">
+        <a href="#work" class="btn">View Projects</a>
+        <a href="#contact" class="btn-outline">Contact Me</a>
       </div>
-
-      <footer>
-        <p>&copy; 2025 Mohammad Ashfaq Mansuri. All rights reserved</p>
-      </footer>
     </div>
-  </body>
+  </header>
+
+  <section id="skills" class="skills-section">
+  <h2>Skills</h2>
+  <div class="skills-grid">
+    <div class="skill">HTML</div>
+    <div class="skill">CSS</div>
+    <div class="skill">JavaScript</div>
+    <div class="skill">SQL</div>
+    <div class="skill">UI/UX</div>
+    <div class="skill">Graphic Design</div>
+    <div class="skill">MS Office</div>
+  </div>
+</section>
+
+  <section id="projects" class="projects-section">
+  <h2>Projects</h2>
+  <div class="project-grid">
+    <div class="project-card">
+      <img src="images/project-placeholder.png" alt="Project Screenshot" />
+      <h3>Movie & Event Ticket Booking Website</h3>
+      <p>A responsive web application with movie listings and seat booking UI.</p>
+      <div class="project-links">
+        <a class="btn" href="#" target="_blank">View Live</a>
+        <a class="btn" href="#" target="_blank">View Code</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="work" class="work-section">
+    <h2>Projects & Designs</h2>
+    <div class="work-grid">
+      <!-- Replace these placeholders with real images inside /images folder -->
+      <div class="work-item"><img src="images/design1.jpg" alt="Work 1"></div>
+      <div class="work-item"><img src="images/design2.jpg" alt="Work 2"></div>
+      <div class="work-item"><img src="images/design3.jpg" alt="Work 3"></div>
+      <div class="work-item"><img src="images/design4.jpg" alt="Work 4"></div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact-section fade-up">
+  <h2>Contact</h2>
+  <p>Email: <a href="mailto:ashfaqmn37@gmail.com">ashfaqmn37@gmail.com</a></p>
+
+  <div class="contact-buttons">$1
+    <a href="resume.pdf" class="btn" download>Download Resume</a>
+  </div>
+
+  
+</section>
+
+  <footer>
+    <p>© 2025 Mohammad Ashfaq Mansuri. All Rights Reserved.</p>
+  </footer>
+<div id="lightbox"><img src="" alt=""></div>
+<script>
+const lightbox = document.getElementById('lightbox');
+const lightImg = lightbox.querySelector('img');
+document.querySelectorAll('.gallery img').forEach(img => {
+  img.addEventListener('click', () => {
+    lightImg.src = img.src;
+    lightbox.classList.add('show');
+  });
+});
+lightbox.addEventListener('click', () => lightbox.classList.remove('show'));
+</script>
+<script>
+const observer = new IntersectionObserver((entries)=>{
+ entries.forEach(entry=>{
+   if(entry.isIntersecting){ entry.target.classList.add('show'); }
+ });
+},{threshold:0.2});
+
+document.querySelectorAll('section, header, footer').forEach(el=>{
+ el.classList.add('fade-up');
+ observer.observe(el);
+});
+</script>
+</body>
 </html>
