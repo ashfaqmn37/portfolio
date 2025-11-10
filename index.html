@@ -186,7 +186,7 @@ button:hover, .btn:hover { background:#e8eef8; }
 <script>
 const lightbox = document.getElementById('lightbox');
 const lightImg = lightbox.querySelector('img');
-document.querySelectorAll('.gallery img').forEach(img => {
+document.querySelectorAll('.work-item img').forEach(img => {
   img.addEventListener('click', () => {
     lightImg.src = img.src;
     lightbox.classList.add('show');
