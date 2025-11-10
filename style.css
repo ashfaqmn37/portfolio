@@ -1,0 +1,191 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: aliceblue;
+  background: linear-gradient(135deg, #e0f7fa, #e4ebfc);
+  font-family: "Inter", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.links-card {
+  background-color: rgb(255, 255, 255);
+  padding: 40px 50px;
+  border-radius: 16px;
+  text-align: center;
+  max-width: 500px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+}
+
+.avatar {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 5px;
+  border: 3px solid white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease;
+}
+
+.avatar:hover {
+  transform: scale(1.05);
+}
+
+.links-card h2 {
+  margin: 12px 0 8px;
+  font-size: 30px;
+  color: #222;
+}
+
+.bio {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+/* .tagline {
+  font-style: italic;
+  color: #888;
+  margin-bottom: 30px;
+} */
+
+/* .links a {
+  display: block;
+  background-color: #e0ecfa;
+  color: #005179;
+  padding: 16px;
+  margin: 14px 0;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 17px;
+  transition: all 0.2s ease;
+} */
+
+.links #yt {
+  display: block;
+  background-color: #f5f7fa;
+
+  color: #dd000b;
+  padding: 16px;
+  margin: 14px 0;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 17px;
+  transition: all 0.2s ease;
+}
+
+.links #git {
+  display: block;
+  /* background-color: #d8d8d8; */
+  background-color: #f5f7fa;
+
+  color: #000000;
+  padding: 16px;
+  margin: 14px 0;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 17px;
+  transition: all 0.2s ease;
+}
+
+.links #iq {
+  display: block;
+  background-color: #f5f7fa;
+
+  color: #e1306c;
+  padding: 16px;
+  margin: 14px 0;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 17px;
+  transition: all 0.2s ease;
+}
+
+.links #linkedin {
+  display: block;
+  /* background-color: #ffffff; */
+  background-color: #f5f7fa;
+
+  color: #0e76a8;
+  padding: 16px;
+  margin: 14px 0;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 17px;
+  transition: all 0.2s ease;
+}
+
+.links #mail {
+  display: block;
+  /* background-color: #ffffff; */
+  background-color: #f5f7fa;
+
+  color: #bb001b;
+  padding: 16px;
+  margin: 14px 0;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 17px;
+  transition: all 0.2s ease;
+  /* border-style: solid;
+  border-color: #fbbc05; */
+}
+
+.links #git:hover {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.links #iq:hover {
+  background-color: #e1306c;
+  color: #ffffff;
+}
+
+.links #linkedin:hover {
+  background-color: #0e76a8;
+  color: #ffffff;
+}
+
+.links #mail:hover {
+  background-color: #bb001b;
+  color: #ffffff;
+}
+.links #yt:hover {
+  background-color: #ff0000;
+  color: #ffffff;
+}
+
+.links a i {
+  margin-right: 8px;
+}
+
+footer {
+  margin-top: 30px;
+  font-size: 14px;
+  color: #575757;
+}
+
+@media (max-width: 600px) {
+  .links-card {
+    width: 100%;
+    height: 100vh;
+    border-radius: 0;
+    padding: 30px 20px;
+    box-shadow: none;
+  }
+}
